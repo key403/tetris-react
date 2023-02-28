@@ -8,10 +8,9 @@
   font-family: sans-serif;
   text-align: center;
   color: #fff;
-  /* background-color: #406; */
   height: 100vh;
-  padding: 20px;
-  background-image: url('tetris01.jpg');
+  padding: 1rem;
+  background-image: url('assets/tetris01.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;

@@ -1,8 +1,8 @@
 import Menu from "./Menu";
 import Tetris from "./Tetris";
 import Switch from "./Switch";
-import arrowsImg from "../arrow-keys.png"
-import spaceBarImg from "../space-bar.png"
+import arrowsImg from "../assets/arrow-keys.png"
+import spaceBarImg from "../assets/space-bar.png"
 
 import { useGameOver } from "../hooks/useGameOver";
 import { useState } from "react";
@@ -33,7 +33,7 @@ const Game = ({ rows, columns }) => {
           </div>
         </div>
       ) : (
-        <Tetris rows={rows} columns={columns} setGameOver={setGameOver} musicOn={isToggled}/>
+        <Tetris rows={rows} columns={columns} setGameOver={setGameOver} musicOn={isToggled} />
       )}
     </div>
   );

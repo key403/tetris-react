@@ -8,6 +8,8 @@ import Previews from "./Previews";
 import { useBoard } from "../hooks/useBoard";
 import { useGameStats } from "../hooks/useGameStats";
 import { usePlayer } from "../hooks/usePlayer";
+import music from "../assets/TetrisTheme.mp3"
+import qKey from "../assets/q-key.png"
 
 const Tetris = ({ rows, columns, setGameOver, musicOn}) => {
   const [gameStats, addLinesCleared] = useGameStats();
@@ -22,6 +24,10 @@ const Tetris = ({ rows, columns, setGameOver, musicOn}) => {
 
   return (
     <div className="Tetris">
+      <div className="controls-quit">
+        <img src={qKey} alt="q" width={35} />
+        <p>To quit</p>
+      </div>
       <Board board={board} />
       <GameStats gameStats={gameStats} />
       <Previews tetrominoes={player.tetrominoes} />
@@ -33,7 +39,7 @@ const Tetris = ({ rows, columns, setGameOver, musicOn}) => {
         setPlayer={setPlayer}
       />
       {musicOn && (
-        <audio src="TetrisTheme(reducido).mp3" autoPlay  loop></audio>
+        <audio src={music} autoPlay loops></audio>
       )}
     </div>
   );
