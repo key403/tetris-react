@@ -39,7 +39,7 @@ const Tetris = ({ rows, columns, setGameOver, musicOn}) => {
         setPlayer={setPlayer}
       />
       {musicOn && (
-        <audio src={music} autoPlay loops></audio>
+        <audio src={music} autoPlay loop></audio>
       )}
     </div>
   );
